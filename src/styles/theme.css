@@ -1,0 +1,19 @@
+[data-theme="light"] {
+    --primary-color: #4913ec;
+    --secondary-color: #e6e0fa;
+    --primary-bg: #f6f6f8;
+    --secondary-bg: #fefefe;
+    --primary-text: #4a4559;
+    --secondary-text: #64519d;
+    --border-color: #ebe9f4;
+}
+
+[data-theme="dark"] {
+    --primary-color: #4913ec;
+    --secondary-color: #191429;
+    --primary-bg: #151022;
+    --secondary-bg: #0f0b1a;
+    --primary-text: #9999a2;
+    --secondary-text: #9f91c8;
+    --border-color: #2c2348;
+}
