@@ -6,6 +6,7 @@
     --primary-text: #4a4559;
     --secondary-text: #64519d;
     --border-color: #ebe9f4;
+    --text-color: #000000;
 }
 
 [data-theme="dark"] {
@@ -16,4 +17,5 @@
     --primary-text: #9999a2;
     --secondary-text: #9f91c8;
     --border-color: #2c2348;
+    --text-color: #ffffff;
 }
