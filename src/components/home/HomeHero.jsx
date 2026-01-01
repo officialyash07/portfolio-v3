@@ -23,21 +23,24 @@ const Hero = () => {
                         </h1>
                         <p className="mt-6 mx-auto max-w-xl text-base leading-relaxed text(--primary-text) sm:text-lg">
                             I&apos;m{" "}
-                            <span className="font-bold text-(--text-color) relative inline-block bg-linear-to-t from-indigo-200/80 to-transparent bg-size-[100%_0.4em] bg-no-repeat bg-bottom">
+                            <span className="font-bold text-(--primary-text) relative inline-block bg-linear-to-t from-indigo-200/80 to-transparent bg-size-[100%_0.4em] bg-no-repeat bg-bottom">
                                 Yash Pathik
                             </span>
                             , a frontend developer transforming complex ideas
                             into clean, intuitive web interfaces.
                         </p>
                         <div className="mt-8 flex flex-col flex-wrap items-center gap-4 font-semibold sm:flex-row sm:justify-center lg:justify-start">
-                            <button className="inline-flex w-60 items-center justify-center gap-2 lg:w-50 rounded-4xl bg-(--primary-color) px-6 py-3 text-sm text-(--secondary-color) shadow-2xl shadow-blue-300 hover:bg-indigo-800 hover:scale-x-[1.05] duration-200 ease-in">
+                            <Link
+                                to="/projects"
+                                className="inline-flex w-60 items-center justify-center gap-2 lg:w-50 rounded-4xl bg-(--primary-color) px-6 py-3 text-sm text-(--secondary-color) shadow-2xl shadow-blue-300 hover:bg-indigo-800 hover:scale-x-[1.05] duration-200 ease-in"
+                            >
                                 View My Work{" "}
                                 <span className="text-(--secondary-color) font-bold duration-200 ease-in">
                                     &#8599;
                                 </span>
-                            </button>
+                            </Link>
 
-                            <button className="inline-flex w-60 items-center justify-center gap-2 lg:w-50 rounded-4xl border border-gray-200 bg-(--secondary-bg) px-6 py-3 text-sm text-gray-600 shadow hover:bg-slate-100 duration-200 ease-in">
+                            <Link className="inline-flex w-60 items-center justify-center gap-2 lg:w-50 rounded-4xl border border-gray-200 bg-(--secondary-bg) px-6 py-3 text-sm text-gray-600 shadow hover:bg-slate-100 duration-200 ease-in">
                                 <svg
                                     width="15px"
                                     height="15px"
@@ -55,7 +58,7 @@ const Hero = () => {
                                     />
                                 </svg>
                                 Resume
-                            </button>
+                            </Link>
                         </div>
                         <div className="mt-10 flex items-center justify-center gap-6 text-sm text-(--primary-text) lg:justify-start">
                             <div className="flex -space-x-2">
@@ -86,7 +89,7 @@ const Hero = () => {
                                 repeat: Infinity,
                                 repeatType: "reverse",
                             }}
-                            className="absolute left-4 sm:-left-12  top-4 z-10 flex items-center gap-3 rounded-xl bg-(--secondary-bg) px-4 py-3 shadow border border-gray-300"
+                            className="absolute left-4 -top-8 sm:-left-12  sm:top-4 z-10 flex items-center gap-3 rounded-xl bg-(--secondary-bg) px-4 py-3 shadow border border-gray-300"
                         >
                             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-100 border border-orange-300">
                                 🏆
@@ -108,7 +111,7 @@ const Hero = () => {
                             />
                         </div>
                         <div className="absolute flex justify-between items-center bottom-4 left-4 right-4 rounded-xl bg-black/30 px-5 py-4 text-white backdrop-blur border-[0.5px] border-gray-100/30">
-                            <div>
+                            <div className="text-left">
                                 <p className="text-xs uppercase tracking-wide">
                                     Current Role
                                 </p>

@@ -6,14 +6,14 @@ import { Outlet } from "react-router-dom";
 
 const Root = () => {
     return (
-        <>
+        <div className="flex flex-col min-h-screen">
             <Header />
-            <main>
+            <main className="flex-1">
                 <Outlet />
                 <AnimatedDotsBackground />
             </main>
             <Footer />
-        </>
+        </div>
     );
 };
 

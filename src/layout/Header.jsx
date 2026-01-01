@@ -11,7 +11,7 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="w-full border-b border-(--border-color) bg-(--secondary-bg)">
+        <header className="w-full border-b border-(--border-color) bg-(--secondary-bg) font-semibold">
             <div className="flex max-w-7xl items-center justify-between px-4 py-4 mx-auto">
                 {/* Left: Logo + Name */}
                 <div className="flex items-center gap-3">
