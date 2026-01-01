@@ -1,5 +1,10 @@
 import { EncryptedText } from "../animations/EncryptedText";
 
+// eslint-disable-next-line no-unused-vars
+import { motion } from "motion/react";
+
+import { Link } from "react-router-dom";
+
 const Hero = () => {
     return (
         <section className="relative overflow-hidden">
@@ -72,11 +77,20 @@ const Hero = () => {
                             </span>
                         </div>
                     </div>
-
-                    {/* RIGHT IMAGE CARD */}
                     <div className="relative mx-auto max-w-sm sm:max-w-md lg:max-w-lg">
-                        {/* Experience badge */}
-                        <div className="absolute -left-16 top-4 z-10 flex items-center gap-3 rounded-xl bg-(--secondary-bg) px-4 py-3 shadow border border-gray-300">
+                        <motion.div
+                            initial={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 20 }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 100,
+                                damping: 2,
+                                bounce: 2,
+                                repeat: Infinity,
+                                repeatType: "reverse",
+                            }}
+                            className="absolute left-4 sm:-left-12  top-4 z-10 flex items-center gap-3 rounded-xl bg-(--secondary-bg) px-4 py-3 shadow border border-gray-300"
+                        >
                             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-100 border border-orange-300">
                                 🏆
                             </span>
@@ -88,25 +102,29 @@ const Hero = () => {
                                     Years Exp.
                                 </p>
                             </div>
-                        </div>
-
-                        {/* Image */}
-                        <div className="overflow-hidden rounded-3xl bg-slate-200 shadow-lg">
+                        </motion.div>
+                        <div className="overflow-hidden rounded-xl border border-gray-300 shadow-lg">
                             <img
                                 src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
                                 alt="Profile"
                                 className="h-full w-full object-cover"
                             />
                         </div>
-
-                        {/* Role card */}
-                        <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-slate-900/80 px-5 py-4 text-white backdrop-blur">
-                            <p className="text-xs uppercase tracking-wide text-slate-300">
-                                Current Role
-                            </p>
-                            <p className="mt-1 text-base font-semibold">
-                                Senior UI/UX Designer
-                            </p>
+                        <div className="absolute flex justify-between items-center bottom-4 left-4 right-4 rounded-xl bg-black/30 px-5 py-4 text-white backdrop-blur border-[0.5px] border-gray-100/30">
+                            <div>
+                                <p className="text-xs uppercase tracking-wide">
+                                    Current Role
+                                </p>
+                                <p className="mt-1 text-base font-semibold">
+                                    Senior UI/UX Designer
+                                </p>
+                            </div>
+                            <Link
+                                to="/about"
+                                className="font-extrabold text-black bg-gray-200 rotate-45 hover:rotate-0 hover:scale-[1.05] hover:bg-white rounded-full w-8 h-8 flex justify-center items-center duration-100 ease-in"
+                            >
+                                &#8599;
+                            </Link>
                         </div>
                     </div>
                 </div>
