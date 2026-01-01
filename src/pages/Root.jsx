@@ -1,6 +1,6 @@
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
-import { AnimatedDotsBackground } from "../layout/AnimateBackground";
+import { AnimatedDotsBackground } from "../components/animations/AnimateBackground";
 
 import { Outlet } from "react-router-dom";
 

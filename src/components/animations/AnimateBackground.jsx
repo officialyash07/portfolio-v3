@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
-import { cn } from "../lib/utils";
+import { cn } from "../../lib/utils";
 
 export function AnimatedDotsBackground({ className }) {
     return (
@@ -13,8 +13,14 @@ export function AnimatedDotsBackground({ className }) {
                 ease: "linear",
                 repeat: Infinity,
             }}
+            // className={cn(
+            //     "absolute inset-0 -z-10 bg-(--primary-bg)",
+            //     "bg-[radial-gradient(circle,rgba(0,0,0,0.2)_1px,transparent_1px)]",
+            //     "bg-size-[28px_28px]",
+            //     className
+            // )}
             className={cn(
-                "absolute inset-0 -z-10 bg-(--primary-bg)",
+                "fixed inset-0 -z-10 bg-(--primary-bg)",
                 "bg-[radial-gradient(circle,rgba(0,0,0,0.2)_1px,transparent_1px)]",
                 "bg-size-[28px_28px]",
                 className
