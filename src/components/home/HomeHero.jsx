@@ -79,13 +79,10 @@ const Hero = () => {
                     </div>
                     <div className="relative mx-auto max-w-sm sm:max-w-md lg:max-w-lg">
                         <motion.div
-                            initial={{ opacity: 1, y: 0 }}
-                            animate={{ opacity: 1, y: 20 }}
+                            initial={{ opacity: 1, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{
-                                type: "spring",
-                                stiffness: 100,
-                                damping: 2,
-                                bounce: 2,
+                                duration: 2,
                                 repeat: Infinity,
                                 repeatType: "reverse",
                             }}
