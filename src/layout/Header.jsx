@@ -10,13 +10,21 @@ import logo from "../assets/images/logo.png";
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
+    const [theme, setTheme] = useState("");
+
+    const handleToggleTheme = () => {
+        const newTheme = theme === "dark" ? "" : "dark";
+        setTheme(newTheme);
+        document.documentElement.setAttribute("data-theme", newTheme);
+    };
+
     return (
-        <header className="w-full border-b border-(--border-color) bg-(--secondary-bg) font-semibold">
+        <header className="w-full border-b border-(--border-color) dark:border-(--border-color)/10 bg-(--secondary-bg) dark:bg-[#0F1019] font-semibold">
             <div className="flex max-w-7xl items-center justify-between px-4 py-4 mx-auto">
                 {/* Left: Logo + Name */}
                 <div className="flex items-center gap-3">
                     <img className="w-7.5" src={logo} alt="Logo" />
-                    <span className="text-lg font-bold text-(--text-color) font-[Montserrat]">
+                    <span className="text-lg font-bold text-(--text-color) dark:text-white font-[Montserrat]">
                         Yash.<span className="text-(--primary-color)">Dev</span>
                     </span>
                 </div>
@@ -26,7 +34,7 @@ export default function Header() {
                     <NavLink
                         to="/"
                         className={({ isActive }) =>
-                            `text-(--text-color) hover:text-(--primary-color) duration-200 ease-in ${
+                            `text-(--text-color) dark:text-white hover:text-[#1337EC] duration-200 ease-in ${
                                 isActive ? "activeLink" : ""
                             }`
                         }
@@ -37,7 +45,7 @@ export default function Header() {
                     <NavLink
                         to="/about"
                         className={({ isActive }) =>
-                            `text-(--text-color) hover:text-(--primary-color) duration-200 ease-in ${
+                            `text-(--text-color) dark:text-white hover:text-(--primary-color) duration-200 ease-in ${
                                 isActive ? "activeLink" : ""
                             }`
                         }
@@ -47,7 +55,7 @@ export default function Header() {
                     <NavLink
                         to="/projects"
                         className={({ isActive }) =>
-                            `text-(--text-color) hover:text-(--primary-color) duration-200 ease-in ${
+                            `text-(--text-color) dark:text-white hover:text-(--primary-color) duration-200 ease-in ${
                                 isActive ? "activeLink" : ""
                             }`
                         }
@@ -57,7 +65,7 @@ export default function Header() {
                     <NavLink
                         to="/contact"
                         className={({ isActive }) =>
-                            `text-(--text-color) hover:text-(--primary-color) duration-200 ease-in ${
+                            `text-(--text-color) dark:text-white hover:text-(--primary-color) duration-200 ease-in ${
                                 isActive ? "activeLink" : ""
                             }`
                         }
@@ -66,18 +74,22 @@ export default function Header() {
                     </NavLink>
 
                     {/* Theme Toggle (UI only) */}
-                    <button className="flex h-9 w-9 items-center justify-center border rounded-full border-gray-300">
+                    <button
+                        onClick={handleToggleTheme}
+                        className="flex h-9 w-9 items-center justify-center border rounded-full border-gray-300/30"
+                    >
                         <svg
-                            width="20px"
-                            height="20px"
+                            className="h-5 w-5 text-gray-700 dark:text-gray-300"
                             viewBox="0 0 24 24"
                             fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="w-7.5"
+                            stroke="currentColor"
+                            strokeWidth="2"
                         >
+                            {/* Bulb */}
                             <path
-                                d="M12 22C17.5228 22 22 17.5228 22 12C22 11.5373 21.3065 11.4608 21.0672 11.8568C19.9289 13.7406 17.8615 15 15.5 15C11.9101 15 9 12.0899 9 8.5C9 6.13845 10.2594 4.07105 12.1432 2.93276C12.5392 2.69347 12.4627 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                                fill="var(--primary-text)"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M9 18h6M10 22h4M12 2a7 7 0 00-4 12c.6.6 1 1.6 1 2h6c0-.4.4-1.4 1-2a7 7 0 00-4-12z"
                             />
                         </svg>
                     </button>
@@ -85,11 +97,11 @@ export default function Header() {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="sm:hidden flex items-center justify-center rounded-md border border-gray-300 p-2"
+                    className="sm:hidden flex items-center justify-center rounded-md border border-gray-300/30 p-2"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     <svg
-                        className="h-5 w-5 text-gray-700"
+                        className="h-5 w-5 text-gray-700 dark:text-gray-300"
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"
@@ -112,13 +124,13 @@ export default function Header() {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="sm:hidden border-t border-(--border-color) bg-(--secondary-bg) flex flex-col items-center overflow-hidden"
+                        className="sm:hidden border-t border-(--border-color)/30 bg-(--secondary-bg) dark:bg-[#0F1019] flex flex-col items-center overflow-hidden"
                     >
                         <nav className="flex flex-col gap-4 px-4 py-4 items-center">
                             <NavLink
                                 to="/"
                                 className={({ isActive }) =>
-                                    `text-(--text-color) hover:text-(--primary-color) duration-200 ease-in ${
+                                    `text-(--text-color) dark:text-white hover:text-(--primary-color) duration-200 ease-in ${
                                         isActive ? "activeLink" : ""
                                     }`
                                 }
@@ -129,7 +141,7 @@ export default function Header() {
                             <NavLink
                                 to="/about"
                                 className={({ isActive }) =>
-                                    `text-(--text-color) hover:text-(--primary-color) duration-200 ease-in ${
+                                    `text-[(--text-color)] dark:text-white hover:text-(--primary-color) duration-200 ease-in ${
                                         isActive ? "activeLink" : ""
                                     }`
                                 }
@@ -139,7 +151,7 @@ export default function Header() {
                             <NavLink
                                 to="/projects"
                                 className={({ isActive }) =>
-                                    `text-(--text-color) hover:text-(--primary-color) duration-200 ease-in ${
+                                    `text-(--text-color) dark:text-white hover:text-(--primary-color) duration-200 ease-in ${
                                         isActive ? "activeLink" : ""
                                     }`
                                 }
@@ -149,7 +161,7 @@ export default function Header() {
                             <NavLink
                                 to="/contact"
                                 className={({ isActive }) =>
-                                    `text-(--text-color) hover:text-(--primary-color) duration-200 ease-in ${
+                                    `text-(--text-color) dark:text-white hover:text-(--primary-color) duration-200 ease-in ${
                                         isActive ? "activeLink" : ""
                                     }`
                                 }
@@ -157,18 +169,22 @@ export default function Header() {
                                 Contact
                             </NavLink>
 
-                            <button className="mt-2 flex h-9 w-9 items-center justify-center border rounded-full border-gray-300">
+                            <button
+                                onClick={handleToggleTheme}
+                                className="flex h-9 w-9 items-center justify-center border rounded-full border-gray-300/30"
+                            >
                                 <svg
-                                    width="20px"
-                                    height="20px"
+                                    className="h-5 w-5 text-gray-700 dark:text-gray-300"
                                     viewBox="0 0 24 24"
                                     fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="w-7.5"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
                                 >
+                                    {/* Bulb */}
                                     <path
-                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 11.5373 21.3065 11.4608 21.0672 11.8568C19.9289 13.7406 17.8615 15 15.5 15C11.9101 15 9 12.0899 9 8.5C9 6.13845 10.2594 4.07105 12.1432 2.93276C12.5392 2.69347 12.4627 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                                        fill="var(--text-color)"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M9 18h6M10 22h4M12 2a7 7 0 00-4 12c.6.6 1 1.6 1 2h6c0-.4.4-1.4 1-2a7 7 0 00-4-12z"
                                     />
                                 </svg>
                             </button>

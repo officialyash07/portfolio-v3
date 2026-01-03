@@ -13,16 +13,11 @@ export function AnimatedDotsBackground({ className }) {
                 ease: "linear",
                 repeat: Infinity,
             }}
-            // className={cn(
-            //     "absolute inset-0 -z-10 bg-(--primary-bg)",
-            //     "bg-[radial-gradient(circle,rgba(0,0,0,0.2)_1px,transparent_1px)]",
-            //     "bg-size-[28px_28px]",
-            //     className
-            // )}
             className={cn(
-                "fixed inset-0 -z-10 bg-(--primary-bg)",
-                "bg-[radial-gradient(circle,rgba(0,0,0,0.2)_1px,transparent_1px)]",
+                "fixed inset-0 -z-10 bg-(--primary-bg) dark:bg-[#111422]",
+                "bg-[radial-gradient(circle,rgba(0,0,0,0.1)_1px,transparent_1px)]",
                 "bg-size-[28px_28px]",
+                "dark:bg-[radial-gradient(circle,rgba(255,255,255,0.05)_1px,transparent_1px)]",
                 className
             )}
         />
