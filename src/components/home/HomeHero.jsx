@@ -11,11 +11,11 @@ const Hero = () => {
             <div className="mx-auto text-center max-w-7xl px-4 py-14 sm:px-6 lg:text-left lg:px-8">
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
                     <div>
-                        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-gray-300/30 bg-white dark:bg-[#161D2B] px-4 py-1 text-xs font-medium text-(--primary-text) dark:text-[#94A3B8] shadow-sm">
+                        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 dark:bg-[#161D2B] px-4 py-1 text-xs font-medium text-(--primary-text) dark:text-[#94A3B8] shadow-sm">
                             <span className="h-2 w-2 rounded-full bg-emerald-500" />
                             Open to Collaborations
                         </div>
-                        <h1 className="text-4xl font-extrabold leading-tight text-(--text-color) dark:text-white sm:text-5xl lg:text-6xl">
+                        <h1 className="text-4xl font-extrabold font-[Montserrat] leading-tight text-(--text-color) dark:text-white sm:text-5xl lg:text-6xl">
                             Building with{" "}
                             <span className="block bg-linear-to-t from-sky-500 to-indigo-500 bg-clip-text text-transparent">
                                 <EncryptedText text="purpose & soul." />
@@ -46,13 +46,13 @@ const Hero = () => {
                         </div>
                         <div className="mt-10 flex items-center justify-center gap-6 text-sm text-[#4a4559] lg:justify-start">
                             <div className="flex -space-x-2">
-                                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-200 text-xs font-semibold border-2 border-(--secondary-bg)">
+                                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-200 text-xs font-semibold border-2 border-(--secondary-bg) dark:border-[#111422]">
                                     JD
                                 </span>
-                                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-200 text-xs font-semibold border-2 border-(--secondary-bg)">
+                                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-200 text-xs font-semibold border-2 border-(--secondary-bg) dark:border-[#111422]">
                                     SM
                                 </span>
-                                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-violet-200 text-xs font-semibold border-2 border-(--secondary-bg)">
+                                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-violet-200 text-xs font-semibold border-2 border-(--secondary-bg) dark:border-[#111422]">
                                     AL
                                 </span>
                             </div>
