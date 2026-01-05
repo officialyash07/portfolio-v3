@@ -2,7 +2,7 @@ import SkillCard from "./SkillCard";
 
 const Toolkit = () => {
     return (
-        <section className="relative overflow-hidden bg-[#FFFFFF] dark:bg-[#0D101B] border-b border-(--border-color) dark:border-(--border-color)/10">
+        <section className="relative overflow-hidden bg-[#FFFFFF] dark:bg-[#111422]">
             <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
                 <h2 className="font-[Montserrat] text-2xl font-semibold text-gray-900 dark:text-white text-center mb-10">
                     The Toolkit

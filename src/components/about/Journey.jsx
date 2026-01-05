@@ -5,7 +5,7 @@ const Journey = () => {
         <section className="relative overflow-hidden bg-[#FBFCFC] dark:bg-[#0D101B] border-b border-(--border-color) dark:border-(--border-color)/10">
             <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 sm:grid-cols-[2fr_1fr] gap-12">
-                    <div className="">
+                    <div>
                         <div className="flex items-center gap-3 mb-8 justify-center sm:justify-start">
                             <div className="bg-[#E3E8FA] p-2 w-fit rounded-lg">
                                 <svg
