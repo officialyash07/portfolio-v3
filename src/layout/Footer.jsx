@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="w-full border-t border-(--border-color) dark:border-(--border-color)/10 bg-(--secondary-bg) dark:bg-[#0F1019] mt-auto text-(--primary-text) dark:text-white text-sm">
             <div className="w-full max-w-7xl px-4 py-4 mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-                <p>© 2024 Alex Doe. All rights reserved.</p>
+                <p>© 2025 Yash Pathik. All rights reserved.</p>
                 <div className="w-full sm:w-fit flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
                     <div className="flex gap-2 items-center order-2 sm:order-1">
                         <svg

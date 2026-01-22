@@ -30,7 +30,9 @@ const AboutHero = () => {
                     </Link>
 
                     <Link
-                        to="/"
+                        to="/Frontend-Yash-Pathik.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex  items-center justify-center gap-2 w-60 lg:w-50 rounded-4xl border border-gray-200/20 bg-white dark:bg-[#111727] px-6 py-3 text-sm text-[#111827] dark:text-white shadow hover:bg-slate-100 hover:text-black duration-200 ease-in"
                     >
                         Resume

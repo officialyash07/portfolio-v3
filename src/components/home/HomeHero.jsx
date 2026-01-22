@@ -5,6 +5,8 @@ import { motion } from "motion/react";
 
 import { Link } from "react-router-dom";
 
+import profileImg from "../../assets/images/profile.png";
+
 const Hero = () => {
     return (
         <section className="relative overflow-hidden">
@@ -40,7 +42,12 @@ const Hero = () => {
                                 </span>
                             </Link>
 
-                            <Link className="inline-flex  items-center justify-center gap-2 w-60 lg:w-50 rounded-4xl border border-gray-200/20 bg-white px-6 py-3 text-sm text-(--text-color) shadow hover:bg-slate-100 hover:text-black duration-200 ease-in">
+                            <Link
+                                to="/Frontend-Yash-Pathik.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center gap-2 w-60 lg:w-50 rounded-4xl border border-gray-200/20 bg-white px-6 py-3 text-sm text-(--text-color) shadow hover:bg-slate-100 hover:text-black duration-200 ease-in"
+                            >
                                 Resume
                             </Link>
                         </div>
@@ -87,7 +94,7 @@ const Hero = () => {
                         </motion.div>
                         <div className="overflow-hidden rounded-xl border border-gray-300/30 shadow-lg">
                             <img
-                                src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+                                src={profileImg}
                                 alt="Profile"
                                 className="h-full w-full object-cover"
                             />
@@ -98,7 +105,7 @@ const Hero = () => {
                                     Current Role
                                 </p>
                                 <p className="mt-1 text-base font-semibold">
-                                    Senior UI/UX Designer
+                                    Frontend Developer
                                 </p>
                             </div>
                             <Link
