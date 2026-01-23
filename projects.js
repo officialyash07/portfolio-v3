@@ -1,6 +1,6 @@
 const github = "https://github.com/officialyash07";
 
-const imagePath = "./src/assets/images/project-images";
+const imagePath = "/project-images";
 
 export const projects = [
     {

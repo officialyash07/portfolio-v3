@@ -1,4 +1,4 @@
-import portfolioImg from "../../assets/images/project-images/portfolio.png";
+import portfolioImg from "/project-images/portfolio.png";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 
