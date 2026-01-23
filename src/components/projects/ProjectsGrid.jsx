@@ -7,6 +7,8 @@ import { motion } from "motion/react";
 
 import { Link } from "react-router-dom";
 
+// import img from "../../assets/images/project-images/portfolio.png";
+
 const ProjectsGrid = () => {
     return (
         <section className="relative overflow-hidden border-b border-(--border-color) dark:border-(--border-color)/10">
