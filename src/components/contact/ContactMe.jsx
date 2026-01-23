@@ -97,7 +97,7 @@ const ContactSection = () => {
                                         Current Location
                                     </p>
                                     <p className="font-semibold text-slate-900 dark:text-white">
-                                        San Francisco, CA
+                                        Bengaluru, India
                                     </p>
                                 </div>
                             </div>
