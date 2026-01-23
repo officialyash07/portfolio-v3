@@ -14,7 +14,7 @@ This is the **third iteration** of my personal portfolio, designed to clearly sh
 
 ## 🔗 Live Demo
 
-🌐 https://officialyash07.github.io/portfolio-v3
+🌐 https://portfolio-v3-brown-five.vercel.app/about
 
 ---
 
@@ -55,9 +55,58 @@ This portfolio is built to:
 
 ## 🖼️ Screenshots
 
+![Portfolio V3 Screenshot](/public/screenshots/home-desktop.png)
+
+![Portfolio V3 Mobile Screenshot](/public/screenshots/home-mobile.png)
+
+![Portfolio V3 Projects Screenshot](/public/screenshots/project.png)
+
+![Portfolio V3 About Screenshot](/public/screenshots/about.png)
+
+![Portfolio V3 Contact Screenshot](/public/screenshots/contanct.png)
+
+## 🚀 Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/officialyash07/portfolio-v3.git
+```
+
+### Navigate into the project
+
+```bash
+cd portfolio-v3
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+### Project Structure
+
 ```text
-/screenshots
-  ├── home.png
-  ├── projects.png
-  └── contact.png
+portfolio-v3/
+├── public/
+├── src/
+│   ├── assets/        # Images, icons
+│   ├── components/    # Reusable components
+│   ├── data/          # Portfolio content
+│   ├── pages/         # Page-level components
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── index.html
+├── package.json
+├── vite.config.js
+├── .gitignore
+└── README.md
 ```
